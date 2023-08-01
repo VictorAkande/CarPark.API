@@ -22,7 +22,7 @@ namespace CarPark.API.Controllers
         }
 
 
-        [HttpGet]
+        [HttpGet("GetTicketsByDate")]
         public async Task<IActionResult> GetTicketsByDate(DateTime date)
         {
 
@@ -33,7 +33,7 @@ namespace CarPark.API.Controllers
         }
 
 
-        [HttpPost]
+        [HttpPost("CalculateTicketCost")]
         public async Task<IActionResult> CalculateTicketCost([FromBody] CalculateTicketRequest calculateTicketRequest)
         {
             if (!ModelState.IsValid)
